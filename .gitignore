@@ -254,5 +254,5 @@ paket-files/
 # OS X
 .DS_Store
 
-# Karma
-_reports/html-results.html
+# Istanbul
+.coverage/
