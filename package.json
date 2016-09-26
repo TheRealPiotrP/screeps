@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/piotrpMSFT/screeps#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "faker": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-mocha": "^3.0.1",
     "gulp-shell": "^0.5.1"
