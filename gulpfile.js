@@ -1,14 +1,13 @@
 'use strict';
 
 var gulp = require('gulp'),
-    karma = require('karma');
+    mocha = require('gulp-mocha');
 
-gulp.task('test', function (done) {
-    var karmaServer = new karma.Server({
-        configFile: __dirname + '/karma.conf.js',
-        singleRun: false
-    }, function (exitCode) {
-        done();
-        process.exit(exitCode);
-    }).start();
+gulp.task('test', function () {
+    return gulp.watch(['roles/**', 'tests/**'], ['test-run']);
+});
+
+gulp.task('test-run', function () {
+    return gulp.src('tests/**/*Spec.js', { read: false })
+               .pipe(mocha({ reporter: 'list' }));
 });
